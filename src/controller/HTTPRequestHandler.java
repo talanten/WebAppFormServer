@@ -14,7 +14,9 @@ public class HTTPRequestHandler {
         
         //Here it could be expanded for another commands like: select, update etc.
         if (path.equals("/webappform/insertUser")) {
+            //Users object is prepared
             UserDetails userReg = new UserDetails(jsonObject);
+            //Dao is called to insert user details into DB and ID is expected for newly created user
             id = UsersDao.insertUser(userReg);
         }
         
