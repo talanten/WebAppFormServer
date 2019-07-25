@@ -10,7 +10,7 @@ public class HTTPRequestHandler {
         String response = "";
         long id = 0;
         JsonParser jsonParser = new JsonParser();
-        JsonObject jsonObject = jsonParser.parse(request).getAsJsonObject().get("props").getAsJsonObject();
+        JsonObject jsonObject = jsonParser.parse(request).getAsJsonObject();
         
         //Here it could be expanded for another commands like: select, update etc.
         if (path.equals("/webappform/insertUser")) {
